@@ -1,0 +1,18 @@
+<div ng-controller="SendCtrl">
+	<div class="col-md-4 padd"><h3>Write a Message!</h3>
+		<h4>Send a message to any other XMPP client</h4>
+		<form name="outgoing" ng-model="sendform">
+		<fieldset class="form-group">
+			<label for="recipient">To</label> 
+			<input ng-model="sendform.outgoing" type="email" class="form-control" placeholder="Enter Email">
+		</fieldset>
+		<fieldset class='form-group'>
+			<label for="message">Message Body</label>
+			<textarea ng-model="sendform.message" class="form-control" rows="4" cols="50"></textarea>
+		</fieldset>
+		<div class="bc">
+			<button ng-click="send(sendform)" type="submit" class "btn btn-primary">Send</button>
+		</div>
+		</form>
+	</div>
+</div>
